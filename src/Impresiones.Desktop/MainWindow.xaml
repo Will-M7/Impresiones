@@ -1,0 +1,25 @@
+<Window x:Class="Impresiones.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Impresiones"
+        Height="360"
+        Width="640"
+        MinHeight="280"
+        MinWidth="420">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Impresiones"
+                       FontSize="28"
+                       FontWeight="SemiBold"
+                       HorizontalAlignment="Center" />
+            <TextBlock Text="Entorno inicial funcionando"
+                       Margin="0,12,0,0"
+                       FontSize="16"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Window>

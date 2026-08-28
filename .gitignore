@@ -1,0 +1,55 @@
+# Build output
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.DotSettings.user
+
+# Node / Baileys dependencies
+node_modules/
+baileys/node_modules/
+
+# Baileys WhatsApp authentication/session state
+baileys/baileys_auth_info/
+
+# Baileys local runtime files
+baileys/descargas/
+baileys/Ordenes/
+baileys/ejecutados/
+
+# Local runtime data
+data/Inbox/*
+data/Processing/*
+data/Printed/*
+data/Discriminated/*
+data/Previews/*
+data/Temp/*
+data/Logs/*
+data/Database/*
+
+# Keep data folder placeholders
+!data/**/.gitkeep
+
+# Logs and temporary files
+/logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# OS files
+Thumbs.db
+Desktop.ini
