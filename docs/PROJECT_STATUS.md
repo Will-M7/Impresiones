@@ -8,14 +8,14 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 
 - Rama: `main`
 - Remote: `https://github.com/Will-M7/Impresiones.git`
-- Ultimo commit publicado y aprobado antes del Commit 02: `63be9abad0a843ee641814248bf17292dd4df260`
-- Mensaje: `chore: initialize clean architecture solution`
+- Ultimo commit publicado y aprobado: `cc9ec1e21799e422ba81e0067ab8ea7115b990f7`
+- Mensaje: `docs: add approved scope and architecture decisions`
 
 ## Estado del Commit 02
 
 - Estado: `COMPLETADO, AUDITADO Y APROBADO`
 - Commit previsto: `docs: add approved scope and architecture decisions`
-- Hash del Commit 02: consultar el HEAD actual del repositorio una vez publicado.
+- Hash del Commit 02: `cc9ec1e21799e422ba81e0067ab8ea7115b990f7`
 - Auditoria documental de OpenCode: aprobada.
 - Build: correcto.
 - Warnings: 0.
@@ -30,7 +30,36 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 - Bloqueadores del Commit 02: ninguno.
 - Siguiente commit autorizado despues de publicar: `Commit 03 — feat: add application configuration and data paths`
 
-El Commit 02 queda listo para publicarse sin incluir su hash dentro del propio documento.
+El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
+
+## Estado del Commit 03
+
+- Estado: `COMPLETADO, AUDITADO Y APROBADO`
+- Commit previsto: `feat: add application configuration and data paths`
+- Hash del Commit 03: consultar el HEAD actual del repositorio una vez publicado.
+- Objetivo: centralizar la configuracion de rutas de datos, resolverlas de forma segura bajo una raiz autorizada y crear las carpetas requeridas de manera idempotente.
+- Pruebas automaticas agregadas: resolucion de rutas, proteccion contra escape, carga JSON y creacion idempotente de directorios.
+- Total de pruebas del Commit 03: 21.
+- Restore: correcto.
+- Build: correcto.
+- Errores: 0.
+- Warnings: 0.
+- Tests detectados: 21.
+- Tests aprobados: 21.
+- Tests fallidos: 0.
+- Tests omitidos: 0.
+- Auditoria tecnica inicial de OpenCode: realizada.
+- Hallazgo menor de normalizacion: corregido.
+- Reauditoria dirigida de OpenCode: aprobada.
+- Prueba manual del usuario: aprobada el 2026-08-31.
+- Creacion exacta de las ocho carpetas: comprobada.
+- Inicializacion idempotente: comprobada.
+- Rechazo de ruta con `..`: comprobado.
+- Mensaje controlado ante configuracion invalida: comprobado.
+- Ausencia de creacion parcial ante configuracion invalida: comprobada.
+- Restauracion de la configuracion de salida: comprobada.
+- Bloqueadores actuales: ninguno.
+- Siguiente commit despues de publicar el Commit 03: `Commit 04 — feat: add print job domain model`
 
 ## Validaciones del Commit 01
 
@@ -58,13 +87,13 @@ No se registran numeros telefonicos reales, nombres de clientes ni nombres de ar
 
 ## Siguiente Secuencia
 
-- Commit actual en preparacion: Commit 02.
-- Siguiente despues de aprobarlo: `Commit 03 — feat: add application configuration and data paths`
-- No autorizar el Commit 03 hasta cerrar, auditar y publicar el Commit 02.
+- Commit actual en cierre: Commit 03.
+- Siguiente despues de publicarlo: `Commit 04 — feat: add print job domain model`
+- No iniciar el Commit 04 hasta cerrar y publicar el Commit 03.
 
 ## Bloqueadores
 
-Ninguno para el Commit 02.
+Ninguno para cerrar el Commit 03.
 
 ## Continuidad
 
