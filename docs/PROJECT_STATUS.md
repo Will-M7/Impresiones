@@ -8,8 +8,8 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 
 - Rama: `main`
 - Remote: `https://github.com/Will-M7/Impresiones.git`
-- Ultimo commit publicado y aprobado: `cc9ec1e21799e422ba81e0067ab8ea7115b990f7`
-- Mensaje: `docs: add approved scope and architecture decisions`
+- Ultimo commit publicado y aprobado: `0f2a2fd6d74a3eddb1293c02f38d2831a80b86d4`
+- Mensaje: `feat: add application configuration and data paths`
 
 ## Estado del Commit 02
 
@@ -36,7 +36,7 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 
 - Estado: `COMPLETADO, AUDITADO Y APROBADO`
 - Commit previsto: `feat: add application configuration and data paths`
-- Hash del Commit 03: consultar el HEAD actual del repositorio una vez publicado.
+- Hash del Commit 03: `0f2a2fd6d74a3eddb1293c02f38d2831a80b86d4`
 - Objetivo: centralizar la configuracion de rutas de datos, resolverlas de forma segura bajo una raiz autorizada y crear las carpetas requeridas de manera idempotente.
 - Pruebas automaticas agregadas: resolucion de rutas, proteccion contra escape, carga JSON y creacion idempotente de directorios.
 - Total de pruebas del Commit 03: 21.
@@ -60,6 +60,34 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Restauracion de la configuracion de salida: comprobada.
 - Bloqueadores actuales: ninguno.
 - Siguiente commit despues de publicar el Commit 03: `Commit 04 — feat: add print job domain model`
+
+## Estado del Commit 04
+
+- Estado: `COMPLETADO, AUDITADO Y APROBADO`
+- Commit previsto: `feat: add print job domain model`
+- Objetivo: agregar el modelo puro de dominio para trabajos de impresion, documentos imprimibles, configuracion individual, estados y transiciones validas.
+- Modelo agregado: `PhoneNumber`, `PrintSettings`, `PrintDocument`, `PrintJob`, enums de dominio y `DomainRuleException`.
+- Pruebas automaticas agregadas: validacion de telefono, configuracion de impresion, estados de documento, transiciones, encapsulacion del trabajo y aplicacion de configuracion a documentos editables.
+- Restore: correcto.
+- Build: correcto.
+- Errores: 0.
+- Warnings: 0.
+- Tests detectados: 92.
+- Tests aprobados: 92.
+- Tests fallidos: 0.
+- Tests omitidos: 0.
+- Auditoria inicial de OpenCode: `COMMIT 04 REQUIERE CORRECCIÓN`.
+- Hallazgos IMPORTANTES de cobertura: faltaba prueba explicita para rechazo de nueve digitos Unicode no ASCII y faltaba prueba explicita de coherencia de hash para valores iguales de `PhoneNumber`.
+- Hallazgo MENOR de cobertura: la desigualdad de `PrintSettings` no cubria individualmente todas sus propiedades.
+- Correccion de hallazgos: los tres puntos fueron cubiertos mediante pruebas unitarias.
+- Implementacion productiva de Domain: no necesito cambios.
+- Reauditoria dirigida de OpenCode: `CORRECCIÓN APROBADA — LISTO PARA CIERRE`.
+- Prueba manual: no requerida para este commit por tratarse de logica pura de Domain.
+- Modelo de dominio validado: si.
+- Integracion externa: no implementada.
+- Acceso a archivos: no implementado.
+- Bloqueadores actuales: ninguno.
+- Siguiente commit despues de aprobar el Commit 04: debe confirmarse con el Plan Maestro antes de continuar.
 
 ## Validaciones del Commit 01
 
@@ -87,13 +115,13 @@ No se registran numeros telefonicos reales, nombres de clientes ni nombres de ar
 
 ## Siguiente Secuencia
 
-- Commit actual en cierre: Commit 03.
-- Siguiente despues de publicarlo: `Commit 04 — feat: add print job domain model`
-- No iniciar el Commit 04 hasta cerrar y publicar el Commit 03.
+- Commit actual en preparacion: Commit 04.
+- Siguiente despues de publicarlo: pendiente de confirmacion mediante el Plan Maestro.
+- No iniciar el siguiente commit hasta cerrar, auditar y publicar el Commit 04.
 
 ## Bloqueadores
 
-Ninguno para cerrar el Commit 03.
+Ninguno para preparar el Commit 04.
 
 ## Continuidad
 
