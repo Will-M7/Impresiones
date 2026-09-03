@@ -24,6 +24,28 @@ public class PrintSettingsTests
         Assert.Equal(CreateSettings(), CreateSettings());
     }
 
+    [Fact]
+    public void Default_UsesExpectedValues()
+    {
+        var settings = PrintSettings.Default;
+
+        Assert.Equal(PaperSize.A4, settings.PaperSize);
+        Assert.Equal(ColorMode.BlackAndWhite, settings.ColorMode);
+        Assert.Equal(SidesMode.SingleSided, settings.SidesMode);
+        Assert.Equal(PageOrientation.Portrait, settings.Orientation);
+        Assert.Equal(1, settings.Copies);
+    }
+
+    [Fact]
+    public void Default_CreatesEqualSettingsWithDifferentReferences()
+    {
+        var first = PrintSettings.Default;
+        var second = PrintSettings.Default;
+
+        Assert.Equal(first, second);
+        Assert.NotSame(first, second);
+    }
+
     public static TheoryData<PrintSettings> DifferentSettings =>
         new()
         {
@@ -48,13 +70,37 @@ public class PrintSettingsTests
     {
         var settings = CreateSettings();
 
-        var copy = new PrintSettings(settings.PaperSize, settings.ColorMode, settings.SidesMode, settings.Orientation, 2);
+        var copy = settings with { Copies = 2 };
 
         Assert.Equal(2, copy.Copies);
         Assert.Equal(settings.PaperSize, copy.PaperSize);
         Assert.Equal(settings.ColorMode, copy.ColorMode);
         Assert.Equal(settings.SidesMode, copy.SidesMode);
         Assert.Equal(settings.Orientation, copy.Orientation);
+    }
+
+    [Fact]
+    public void Copy_PreservesValuesAndCreatesDifferentReference()
+    {
+        var settings = ColorSettings();
+
+        var copy = settings.Copy();
+
+        Assert.Equal(settings, copy);
+        Assert.NotSame(settings, copy);
+    }
+
+    [Fact]
+    public void WithExpression_FromCopy_DoesNotChangeOriginal()
+    {
+        var settings = CreateSettings();
+        var copy = settings.Copy();
+
+        var variant = copy with { Copies = 3 };
+
+        Assert.Equal(1, settings.Copies);
+        Assert.Equal(1, copy.Copies);
+        Assert.Equal(3, variant.Copies);
     }
 
     [Theory]
@@ -85,5 +131,10 @@ public class PrintSettingsTests
     private static PrintSettings CreateSettings()
     {
         return new PrintSettings(PaperSize.A4, ColorMode.BlackAndWhite, SidesMode.SingleSided, PageOrientation.Portrait, 1);
+    }
+
+    private static PrintSettings ColorSettings()
+    {
+        return new PrintSettings(PaperSize.A3, ColorMode.Color, SidesMode.DoubleSided, PageOrientation.Landscape, 2);
     }
 }

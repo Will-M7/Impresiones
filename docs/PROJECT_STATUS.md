@@ -8,8 +8,8 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 
 - Rama: `main`
 - Remote: `https://github.com/Will-M7/Impresiones.git`
-- Ultimo commit publicado y aprobado: `0f2a2fd6d74a3eddb1293c02f38d2831a80b86d4`
-- Mensaje: `feat: add application configuration and data paths`
+- Ultimo commit publicado y aprobado: `550564e90cb7d120391016c1b72b7c41d43c68b4`
+- Mensaje: `feat: add print job domain model`
 
 ## Estado del Commit 02
 
@@ -65,6 +65,7 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 
 - Estado: `COMPLETADO, AUDITADO Y APROBADO`
 - Commit previsto: `feat: add print job domain model`
+- Hash del Commit 04: `550564e90cb7d120391016c1b72b7c41d43c68b4`
 - Objetivo: agregar el modelo puro de dominio para trabajos de impresion, documentos imprimibles, configuracion individual, estados y transiciones validas.
 - Modelo agregado: `PhoneNumber`, `PrintSettings`, `PrintDocument`, `PrintJob`, enums de dominio y `DomainRuleException`.
 - Pruebas automaticas agregadas: validacion de telefono, configuracion de impresion, estados de documento, transiciones, encapsulacion del trabajo y aplicacion de configuracion a documentos editables.
@@ -87,7 +88,34 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Integracion externa: no implementada.
 - Acceso a archivos: no implementado.
 - Bloqueadores actuales: ninguno.
-- Siguiente commit despues de aprobar el Commit 04: debe confirmarse con el Plan Maestro antes de continuar.
+- Commit 04 publicado: `550564e90cb7d120391016c1b72b7c41d43c68b4`
+- Siguiente commit despues de aprobar el Commit 04: `Commit 05 — feat: add document print settings`
+
+## Estado del Commit 05
+
+- Estado: `COMPLETADO, AUDITADO Y APROBADO`
+- Commit previsto: `feat: add document print settings`
+- Objetivo: completar la configuracion predeterminada explicita de documentos y la copia independiente de `PrintSettings`.
+- Nota de alcance: el Commit 04 adelanto `PrintSettings`, sus enums y su asociacion con `PrintDocument`; el Commit 05 completa defaults y copia independiente sin duplicar codigo.
+- `PrintSettings.Default`: A4, blanco y negro, una cara, vertical y una copia.
+- `PrintSettings.Copy()`: copia independiente.
+- Compatibilidad de `PrintDocument`: se agrego creacion sin configuracion explicita usando `PrintSettings.Default`.
+- Restore: correcto.
+- Build: correcto.
+- Errores: 0.
+- Warnings: 0.
+- Tests detectados: 99.
+- Tests aprobados: 99.
+- Tests fallidos: 0.
+- Tests omitidos: 0.
+- Auditoria de OpenCode: `COMMIT 05 APROBADO PARA PUBLICACIÓN`.
+- Pruebas automaticas agregadas: defaults explicitos, igualdad por valor, referencias independientes, copia independiente, variante via `with` y creacion de documentos con defaults.
+- Prueba manual: no requerida para este commit por tratarse de logica pura de Domain.
+- Hallazgo 07 conservado: el rechazo de audio, video y formatos no permitidos se atendera en el Commit 07.
+- Hallazgo 09 conservado: la normalizacion y agrupacion por telefono se atendera en el Commit 09.
+- Metadata Git: se elimino un `REBASE_HEAD` residual confirmado como metadata obsoleta, sin impacto sobre commits, staging o working tree.
+- Bloqueadores actuales: ninguno.
+- Siguiente commit despues de auditar y publicar el Commit 05: `Commit 06 — feat: add apply settings to all documents`
 
 ## Validaciones del Commit 01
 
@@ -108,20 +136,20 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Existe comportamiento heredado relacionado con audio.
 - Permanecen rutas heredadas de audio, Ordenes y ejecutados.
 - Algunos archivos utilizaron identificadores de 15 digitos.
-- El rechazo de audio, video y formatos no permitidos se atendera en el Commit 07.
-- La normalizacion y agrupacion por telefono se atendera en el Commit 09.
+- Hallazgo 07: el rechazo de audio, video y formatos no permitidos se atendera en el Commit 07.
+- Hallazgo 09: la normalizacion y agrupacion por telefono se atendera en el Commit 09.
 
 No se registran numeros telefonicos reales, nombres de clientes ni nombres de archivos reales en este documento.
 
 ## Siguiente Secuencia
 
-- Commit actual en preparacion: Commit 04.
-- Siguiente despues de publicarlo: pendiente de confirmacion mediante el Plan Maestro.
-- No iniciar el siguiente commit hasta cerrar, auditar y publicar el Commit 04.
+- Commit actual en preparacion: ninguno.
+- Siguiente despues de publicarlo: `Commit 06 — feat: add apply settings to all documents`.
+- No iniciar el siguiente commit hasta cerrar, auditar y publicar el Commit 05.
 
 ## Bloqueadores
 
-Ninguno para preparar el Commit 04.
+Ninguno para cerrar y publicar el Commit 05.
 
 ## Continuidad
 

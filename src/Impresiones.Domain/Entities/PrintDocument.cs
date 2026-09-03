@@ -10,6 +10,15 @@ public sealed class PrintDocument
         string id,
         string storedFileName,
         PrintableDocumentType documentType,
+        DateTimeOffset receivedAt)
+        : this(id, storedFileName, documentType, receivedAt, PrintSettings.Default)
+    {
+    }
+
+    public PrintDocument(
+        string id,
+        string storedFileName,
+        PrintableDocumentType documentType,
         DateTimeOffset receivedAt,
         PrintSettings settings)
     {

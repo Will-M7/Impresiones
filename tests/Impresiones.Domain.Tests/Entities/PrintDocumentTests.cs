@@ -22,6 +22,35 @@ public class PrintDocumentTests
         Assert.Equal(DefaultSettings(), document.Settings);
     }
 
+    [Fact]
+    public void Constructor_WithoutSettings_UsesDefaultSettings()
+    {
+        var document = new PrintDocument("doc-1", "documento.pdf", PrintableDocumentType.Pdf, ReceivedAt);
+
+        Assert.Equal(PrintSettings.Default, document.Settings);
+    }
+
+    [Fact]
+    public void Constructor_WithoutSettings_CreatesIndependentDefaultSettings()
+    {
+        var first = new PrintDocument("doc-1", "documento.pdf", PrintableDocumentType.Pdf, ReceivedAt);
+        var second = new PrintDocument("doc-2", "documento.pdf", PrintableDocumentType.Pdf, ReceivedAt);
+
+        Assert.Equal(first.Settings, second.Settings);
+        Assert.NotSame(first.Settings, second.Settings);
+    }
+
+    [Fact]
+    public void Constructor_WithExplicitSettings_PreservesReceivedSettings()
+    {
+        var settings = ColorSettings();
+
+        var document = new PrintDocument("doc-1", "documento.pdf", PrintableDocumentType.Pdf, ReceivedAt, settings);
+
+        Assert.Equal(settings, document.Settings);
+        Assert.Same(settings, document.Settings);
+    }
+
     [Theory]
     [InlineData("")]
     [InlineData("   ")]
