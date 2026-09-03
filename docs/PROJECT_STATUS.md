@@ -8,8 +8,8 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 
 - Rama: `main`
 - Remote: `https://github.com/Will-M7/Impresiones.git`
-- Ultimo commit publicado y aprobado: `550564e90cb7d120391016c1b72b7c41d43c68b4`
-- Mensaje: `feat: add print job domain model`
+- Ultimo commit publicado y aprobado: `9bb0354fd90e2c70ea6216fa19c09d565cfe1607`
+- Mensaje: `feat: add document print settings`
 
 ## Estado del Commit 02
 
@@ -115,7 +115,37 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Hallazgo 09 conservado: la normalizacion y agrupacion por telefono se atendera en el Commit 09.
 - Metadata Git: se elimino un `REBASE_HEAD` residual confirmado como metadata obsoleta, sin impacto sobre commits, staging o working tree.
 - Bloqueadores actuales: ninguno.
+- Commit 05 publicado: `9bb0354fd90e2c70ea6216fa19c09d565cfe1607`
 - Siguiente commit despues de auditar y publicar el Commit 05: `Commit 06 — feat: add apply settings to all documents`
+
+## Estado del Commit 06
+
+- Estado: `COMPLETADO, AUDITADO Y APROBADO`
+- Commit previsto: `feat: add apply settings to all documents`
+- Objetivo: implementar en Application el caso de uso que aplica la configuracion del documento origen a todos los documentos editables del mismo trabajo.
+- Auditoria de OpenCode: `COMMIT 06 APROBADO PARA PUBLICACIÓN`.
+- Contratos agregados: comando, resultado, handler de aplicacion e interfaz `IPrintJobRepository`.
+- Repositorio: abstraccion asincrona con `CancellationToken` para obtener y guardar `PrintJob`.
+- Reutilizacion de Domain: el caso de uso usa `PrintJob.ApplySettingsToEditableDocuments`.
+- Ajuste minimo de Domain: cada documento editable recibe una copia independiente mediante `PrintSettings.Copy()`.
+- Documentos terminales: `Printed` y `Discriminated` permanecen intactos.
+- Guardado unico mediante `IPrintJobRepository`.
+- Estados de documentos: no se modifican durante la operacion.
+- Persistencia real: no implementada.
+- Pruebas automaticas agregadas: aplicacion a `Pending` y `Processing`, omision de terminales, copias independientes, edicion individual posterior, guardado unico, conteos, errores controlados, validacion de identificadores, propagacion de `CancellationToken`, trabajo sin editables y conservacion de estados.
+- Restore: correcto.
+- Build: correcto.
+- Errores: 0.
+- Warnings: 0.
+- Tests detectados: 118.
+- Tests aprobados: 118.
+- Tests fallidos: 0.
+- Tests omitidos: 0.
+- Prueba manual: no requerida por tratarse de logica de Domain/Application.
+- Hallazgo 07 conservado: el rechazo de audio, video y formatos no permitidos se atendera en el Commit 07.
+- Hallazgo 09 conservado: la normalizacion y agrupacion por telefono se atendera en el Commit 09.
+- Bloqueadores actuales: ninguno.
+- Siguiente commit despues de auditar y publicar el Commit 06: `Commit 07 — feat: add printable file validation`
 
 ## Validaciones del Commit 01
 
@@ -143,13 +173,13 @@ No se registran numeros telefonicos reales, nombres de clientes ni nombres de ar
 
 ## Siguiente Secuencia
 
-- Commit actual en preparacion: ninguno.
-- Siguiente despues de publicarlo: `Commit 06 — feat: add apply settings to all documents`.
-- No iniciar el siguiente commit hasta cerrar, auditar y publicar el Commit 05.
+- Commit actual en preparacion: Commit 06.
+- Siguiente despues de publicarlo: `Commit 07 — feat: add printable file validation`.
+- No iniciar el siguiente commit hasta cerrar, auditar y publicar el Commit 06.
 
 ## Bloqueadores
 
-Ninguno para cerrar y publicar el Commit 05.
+Ninguno para preparar el Commit 06.
 
 ## Continuidad
 

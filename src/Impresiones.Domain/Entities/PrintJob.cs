@@ -58,7 +58,7 @@ public sealed class PrintJob
 
         foreach (var document in documents.Where(document => document.CanUpdateSettings))
         {
-            document.UpdateSettings(settings);
+            document.UpdateSettings(settings.Copy());
         }
     }
 
