@@ -8,8 +8,11 @@ Documentos relacionados: [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md]
 
 - Rama: `main`
 - Remote: `https://github.com/Will-M7/Impresiones.git`
-- Ultimo commit publicado y aprobado: `b8448fd9d89f75e5a93c7dbd359b04ea37e87e50`
-- Mensaje: `feat: add apply settings to all documents`
+- Ultimo commit funcional aprobado: Commit 07
+- Hash: `f0c9f26b7178b25897fd529da10c04ac69f9a7c3`
+- Mensaje: `feat: add printable file validation`
+- Infraestructura de colaboracion de IA completada y aprobada tecnicamente como base previa al Commit 08.
+- Siguiente commit funcional: `Commit 08 — feat: add inbox monitoring service`
 
 ## Estado del Commit 02
 
@@ -150,7 +153,7 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 
 ## Estado del Commit 07
 
-- Estado: `COMPLETADO, AUDITADO Y APROBADO PARA PUBLICACIÓN`
+- Estado: `COMPLETADO, AUDITADO, APROBADO Y PUBLICADO`
 - Commit previsto: `feat: add printable file validation`
 - Objetivo: validar archivos imprimibles por extension antes de admitirlos en la aplicacion o descargarlos desde Baileys.
 - Auditoria inicial de OpenCode: `COMMIT 07 REQUIERE CORRECCIÓN`.
@@ -201,7 +204,7 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Hallazgo 07: cerrado en este commit.
 - Hallazgo 09 conservado: la normalizacion y agrupacion por telefono, incluidos identificadores de 15 digitos, continua pendiente para el Commit 09.
 - Bloqueadores actuales: ninguno.
-- Siguiente commit despues de auditar y publicar el Commit 07: `Commit 08 — feat: add inbox monitoring service`
+- Siguiente commit funcional despues del Commit 07: `Commit 08 — feat: add inbox monitoring service`
 
 ## Validaciones del Commit 01
 
@@ -222,20 +225,21 @@ El Commit 02 fue publicado y queda como base aprobada para el Commit 03.
 - Existe comportamiento heredado relacionado con audio; retirado o desactivado en preparacion del Commit 07.
 - Permanecen rutas heredadas de audio, Ordenes y ejecutados; referencias sin uso retiradas en preparacion del Commit 07.
 - Algunos archivos utilizaron identificadores de 15 digitos.
-- Hallazgo 07: el rechazo de audio, video y formatos no permitidos se atendera en el Commit 07.
+- Hallazgo 07: el rechazo de audio, video y formatos no permitidos fue cerrado en el Commit 07.
 - Hallazgo 09: la normalizacion y agrupacion por telefono se atendera en el Commit 09.
 
 No se registran numeros telefonicos reales, nombres de clientes ni nombres de archivos reales en este documento.
 
 ## Siguiente Secuencia
 
-- Commit actual aprobado para publicacion: Commit 07.
-- Siguiente paso: `Commit 08 — feat: add inbox monitoring service`.
-- No iniciar el Commit 08 hasta cerrar y publicar el Commit 07.
+- Ultimo commit funcional aprobado: Commit 07 (`f0c9f26b7178b25897fd529da10c04ac69f9a7c3`).
+- Infraestructura de colaboracion de IA completada y aprobada tecnicamente como base previa al Commit 08.
+- Siguiente commit funcional: `Commit 08 — feat: add inbox monitoring service`.
+- No iniciar el Commit 08 durante el commit tecnico de soporte.
 
 ## Bloqueadores
 
-Ninguno para preparar el Commit 07.
+Ninguno para preparar el commit tecnico de soporte de coordinacion de IA.
 
 ## Continuidad
 

@@ -31,6 +31,9 @@ Ver tambien [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md](ARCHITECTURE
 22. 2026-09-03: En grupos de WhatsApp, el propietario del mensaje es el participante remitente, no el identificador del grupo.
 23. 2026-09-03: Estados, canales, newsletters y broadcasts quedan excluidos del procesamiento de Baileys.
 24. 2026-09-03: La normalizacion de identificadores LID y de quince digitos continua pendiente para el Commit 09.
+25. 2026-09-05: Antigravity queda aprobado como explorador, planificador y verificador; se mantiene la regla de un solo escritor por worktree.
+26. 2026-09-05: `AGENTS.md` es la instruccion comun para Codex, OpenCode y Antigravity; `.agents/skills` contiene procedimientos bajo demanda.
+27. 2026-09-05: No se introducen plugins ni MCP en este momento para el flujo de colaboracion de IA.
 
 ## Asuntos Pendientes
 
