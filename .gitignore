@@ -22,6 +22,9 @@ baileys/descargas/
 baileys/Ordenes/
 baileys/ejecutados/
 
+# Baileys runtime state
+baileys/baileys-processed-messages.json
+
 # Local runtime data
 data/Inbox/*
 data/Processing/*

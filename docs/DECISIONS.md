@@ -27,6 +27,11 @@ Ver tambien [PROJECT_SCOPE.md](PROJECT_SCOPE.md), [ARCHITECTURE.md](ARCHITECTURE
 19. 2026-08-30: Los commits seran pequenos y usaran convenciones `chore:`, `feat:`, `fix:`, `refactor:`, `test:` y `docs:`.
 20. 2026-08-30: Codex construye; OpenCode audita sin modificar; el usuario realiza las validaciones manuales necesarias.
 
+21. 2026-09-03: Baileys acepta archivos imprimibles desde chats directos y grupos.
+22. 2026-09-03: En grupos de WhatsApp, el propietario del mensaje es el participante remitente, no el identificador del grupo.
+23. 2026-09-03: Estados, canales, newsletters y broadcasts quedan excluidos del procesamiento de Baileys.
+24. 2026-09-03: La normalizacion de identificadores LID y de quince digitos continua pendiente para el Commit 09.
+
 ## Asuntos Pendientes
 
 - Confirmar modelos exactos de impresoras.
